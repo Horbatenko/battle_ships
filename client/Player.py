@@ -1,6 +1,7 @@
-from Connection import Connection
-from game_objects.Fields import PlayerField, EnemyField
+from .Connection import Connection
+from .game_objects.Fields import PlayerField, EnemyField
 from termcolor import colored
+
 
 class Player:
 
@@ -40,6 +41,8 @@ class Player:
     def makeShot(self):
         self.alertMessage('Make shot: ', 'yellow')
         data = str(input())
+        if '-' not in data:
+            self.makeShot()
         self.lastShot['x'], self.lastShot['y'] = data.split('-')
         if self.enemyField.getCell(self.lastShot['x'], self.lastShot['y']).state:
             self.connection.sendData(data, isBytes=False)

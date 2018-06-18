@@ -1,6 +1,7 @@
-from game_objects.Cells import Water
+from ..Cells.Water import Water
 from termcolor import colored
 from abc import ABC, abstractmethod
+
 
 class Field(ABC):
 
@@ -9,13 +10,14 @@ class Field(ABC):
         self.height = height
         self.width = width
         self.label = colored(label, 'grey', attrs=['underline'])
+        self.field = []
 
     def genField(self):
-        self.field = []
+
         for i in range(0, self.height):
             row = []
             for j in range(0, self.width):
-                row.append(Water.Water(i, j, self))
+                row.append(Water(i, j, self))
             self.field.append(row)
 
     def print(self):
@@ -29,6 +31,6 @@ class Field(ABC):
         try:
             cell = self.field[int(x)][int(y)]
         except IndexError:
-            return None
+            return self.field[0][0]
         else:
             return cell

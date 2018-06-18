@@ -1,15 +1,16 @@
 import random
-from client.game_objects.Cells import Ship, Water
-from client.game_objects.Fields.Field import Field
+from ..Cells import Ship, Water
+from .Field import Field
 
 class PlayerField(Field):
 
     def __init__(self, height, width, shipsNum):
         Field.__init__(self, height, width, 'Your field: ')
         self.shipsNum = shipsNum
+        self.field = []
 
     def genField(self):
-        self.field = []
+
         maxPosition = self.height * self.width
         shipsPositions = random.sample(range(0, maxPosition), self.shipsNum)
         iter = 0

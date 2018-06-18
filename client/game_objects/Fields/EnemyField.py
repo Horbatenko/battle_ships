@@ -1,5 +1,6 @@
-from client.game_objects.Fields.Field import Field
-from client.game_objects.Cells.EnemyCell import EnemyCell
+from .Field import Field
+from ..Cells.EnemyCell import EnemyCell
+
 
 class EnemyField(Field):
     def __init__(self, height, width):

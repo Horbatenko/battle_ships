@@ -1,5 +1,6 @@
 from termcolor import colored
 
+
 class Icon:
 
     def __init__(self, sign, color):

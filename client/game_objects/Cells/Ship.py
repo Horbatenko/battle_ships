@@ -1,5 +1,5 @@
-from client.game_objects.Cells.Cell import Cell
-from client.game_objects.Icons import ShipIcon, ShotedShipIcon as SSI
+from .Cell import Cell
+from ..Icons import ShipIcon, ShotedShipIcon as SSI
 
 class Ship(Cell):
     def __init__(self, x, y, field):

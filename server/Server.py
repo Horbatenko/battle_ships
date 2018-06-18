@@ -1,7 +1,8 @@
 from socket import socket, AF_INET, SOCK_STREAM
-from Connection import Connection
+from .Connection import Connection
 import threading
 import random
+
 
 class Server:
 

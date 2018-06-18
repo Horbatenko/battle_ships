@@ -1,5 +1,6 @@
-from client.game_objects.Cells.Cell import Cell
-from client.game_objects.Icons import WaterIcon, ShotedShipIcon as SSI, ShotedWaterIcon as SWI
+from .Cell import Cell
+from ..Icons import WaterIcon, ShotedShipIcon as SSI, ShotedWaterIcon as SWI
+
 
 class EnemyCell(Cell):
 

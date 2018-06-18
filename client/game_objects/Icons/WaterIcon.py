@@ -1,5 +1,6 @@
-from client.game_objects.Icons.Icon import Icon
+from .Icon import Icon
 from termcolor import cprint
+
 
 class WaterIcon(Icon):
 

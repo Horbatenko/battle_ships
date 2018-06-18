@@ -1,4 +1,5 @@
-from client.game_objects.Icons.Icon import Icon
+from .Icon import Icon
+
 
 class ShotedShipIcon(Icon):
 
